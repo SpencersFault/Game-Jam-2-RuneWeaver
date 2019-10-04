@@ -67,6 +67,7 @@ public class PlayerStateMachine : MonoBehaviour
                 break;
         }
     }
+   
     public void TakeDamage(float getDamageAmount)
     {
         player.currentHP -= getDamageAmount;
