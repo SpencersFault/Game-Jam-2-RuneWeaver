@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyStateMachine : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class EnemyStateMachine : MonoBehaviour
 
     private float currentCooldown = 0f;
     private float maxCooldown = 5f;
+    public Image progressbar;
+    public Text enemyHealth;
 
     //this gameobject
     private Vector2 startPosition;
@@ -81,7 +84,8 @@ public class EnemyStateMachine : MonoBehaviour
     void UpgradeProgressBar()
     {
         currentCooldown = currentCooldown + Time.deltaTime;
-
+        float calc_cooldown = currentCooldown / maxCooldown;
+        progressbar.transform.localScale = new Vector3(Mathf.Clamp(calc_cooldown, 0, 1), progressbar.transform.localScale.y, progressbar.transform.localScale.z);
         if (currentCooldown >= maxCooldown)
         {
             currentState = turnState.chooseAction;
@@ -141,5 +145,16 @@ public class EnemyStateMachine : MonoBehaviour
     {
         float calc_damage = enemy.currentATK + BSM.PerformList [0].choosenAttack.attackDamage;
         PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
+    }
+    public void TakeDamage(float getDamageAmount)
+    {
+        enemy.currentHP -= getDamageAmount;
+        
+        if (enemy.currentHP <= 0)
+        {
+            currentState = turnState.dead;
+            Debug.Log("Victory!");
+        }
+
     }
 }

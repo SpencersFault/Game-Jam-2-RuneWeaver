@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStateMachine : MonoBehaviour
 {
     public Player player;
     private BattleStateMachine BSM;
+    
 
     public enum turnState
     {
@@ -14,10 +16,11 @@ public class PlayerStateMachine : MonoBehaviour
     }
     public turnState currentState;
     //for the health bar
-
+    
     //this gameobject
     private Vector2 startPosition;
     private bool alive = true;
+    
     void Start()
     {
         currentState = turnState.alive;
@@ -67,6 +70,7 @@ public class PlayerStateMachine : MonoBehaviour
     public void TakeDamage(float getDamageAmount)
     {
         player.currentHP -= getDamageAmount;
+        
         if(player.currentHP <= 0)
         {
             currentState = turnState.dead;
@@ -74,5 +78,10 @@ public class PlayerStateMachine : MonoBehaviour
         }
      
     }
-    
+    void DoDamage()
+    {
+        //float calc_damage = player.currentATK + BSM.PerformList[0].choosenAttack.attackDamage;
+        //PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
+    }
+
 }

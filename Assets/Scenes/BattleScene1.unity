@@ -423,65 +423,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &381176898
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 381176901}
-  - component: {fileID: 381176900}
-  - component: {fileID: 381176899}
-  m_Layer: 0
-  m_Name: Grid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &381176899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381176898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a3a816bc256d28458a610a335daeae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridElements: []
---- !u!114 &381176900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381176898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c162e0272eae046b2bb88fa98754fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dimensions: 0
-  sprite: {fileID: 0}
---- !u!4 &381176901
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381176898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478344189
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +608,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2801231552284419624, guid: 6bcc73fd271d2a74a94334320b5700dc,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -743,7 +684,7 @@ GameObject:
   - component: {fileID: 708971629}
   m_Layer: 0
   m_Name: Rune
-  m_TagString: Untagged
+  m_TagString: Rune
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -763,7 +704,7 @@ Transform:
   - {fileID: 1604771251}
   - {fileID: 1935622559}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &926267717
 GameObject:
@@ -843,7 +784,7 @@ Transform:
   m_Children:
   - {fileID: 1040863484}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1040863483
 GameObject:
@@ -912,7 +853,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d5b10404e1339464a890dc5dd6a7f811, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1066,7 +1007,7 @@ GameObject:
   - component: {fileID: 1255487266}
   - component: {fileID: 1255487265}
   m_Layer: 5
-  m_Name: EnemyBar (1)
+  m_Name: EnemyBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1331,6 +1272,8 @@ MonoBehaviour:
     - {fileID: 5285125632437212808, guid: a58a696ce04de3840af2766f00c1d041, type: 3}
     - {fileID: 8788026181056249129, guid: acdc238cc96011a4195b8b339d3e4446, type: 3}
   currentState: 0
+  progressbar: {fileID: 1939588663}
+  enemyHealth: {fileID: 0}
   PlayerToAttack: {fileID: 1205864591}
 --- !u!212 &1569654451
 SpriteRenderer:
@@ -1449,7 +1392,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3690084496328417868, guid: 6bcc73fd271d2a74a94334320b5700dc,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1645,7 +1588,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4825632588510966998, guid: 6bcc73fd271d2a74a94334320b5700dc,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1722,7 +1665,7 @@ GameObject:
   - component: {fileID: 1939588664}
   - component: {fileID: 1939588663}
   m_Layer: 5
-  m_Name: EnemyBar (2)
+  m_Name: ProgressBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1742,9 +1685,9 @@ RectTransform:
   m_Father: {fileID: 2127071690}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 729.75, y: 257}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 1689.75, y: 257}
   m_SizeDelta: {x: 460.5, y: 46.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1939588663
