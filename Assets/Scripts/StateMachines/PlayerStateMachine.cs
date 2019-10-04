@@ -8,6 +8,7 @@ public class PlayerStateMachine : MonoBehaviour
     public Player player;
     private BattleStateMachine BSM;
     
+    
 
     public enum turnState
     {
@@ -20,9 +21,11 @@ public class PlayerStateMachine : MonoBehaviour
     //this gameobject
     private Vector2 startPosition;
     private bool alive = true;
-    
+    private PlayerStats stats;
+    public GameObject playerHP;
     void Start()
     {
+
         currentState = turnState.alive;
         BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine>();
         startPosition = transform.position;
@@ -74,11 +77,23 @@ public class PlayerStateMachine : MonoBehaviour
         
         if(player.currentHP <= 0)
         {
+            player.currentHP = 0;
             currentState = turnState.dead;
             Debug.Log("Game Over");
         }
-     
+      
     }
+
+    void createPlayerDisplay()
+    {
+        playerHP = Instantiate(playerHP) as GameObject;
+        stats = playerHP.GetComponent<PlayerStats>();
+        stats.playerName.text = player.playername;
+        stats.playerHP.text = "HP: " + player.currentHP;
+    }
+   
+       //playerHealth.text = player.currentHP + " / " + player.baseHP;
+      
     void DoDamage()
     {
         //float calc_damage = player.currentATK + BSM.PerformList[0].choosenAttack.attackDamage;

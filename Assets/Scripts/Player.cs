@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class Player
 {
     public string playername;
-
+   
     public float baseHP;
     public float currentHP;
-
+    
     
     // Start is called before the first frame update
     void Start()
