@@ -22,9 +22,11 @@ public class PlayerStateMachine : MonoBehaviour
     private Vector2 startPosition;
     private bool alive = true;
     private PlayerStats stats;
-    public GameObject playerHP;
+    public GameObject playerDisplay;
     void Start()
     {
+        //create panel, fill in info
+        createPlayerDisplay();
 
         currentState = turnState.alive;
         BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine>();
@@ -69,6 +71,7 @@ public class PlayerStateMachine : MonoBehaviour
                 }
                 break;
         }
+
     }
    
     public void TakeDamage(float getDamageAmount)
@@ -81,19 +84,25 @@ public class PlayerStateMachine : MonoBehaviour
             currentState = turnState.dead;
             Debug.Log("Game Over");
         }
-      
+        UpdatePlayerDisplay();
     }
 
     void createPlayerDisplay()
     {
-        playerHP = Instantiate(playerHP) as GameObject;
-        stats = playerHP.GetComponent<PlayerStats>();
+        playerDisplay = Instantiate(playerDisplay) as GameObject;
+        stats = playerDisplay.GetComponent<PlayerStats>();
         stats.playerName.text = player.playername;
         stats.playerHP.text = "HP: " + player.currentHP;
+
+        
     }
-   
-       //playerHealth.text = player.currentHP + " / " + player.baseHP;
-      
+
+    
+    void UpdatePlayerDisplay()
+    {
+        stats.playerHP.text = "HP: " + player.currentHP;
+        
+    }
     void DoDamage()
     {
         //float calc_damage = player.currentATK + BSM.PerformList[0].choosenAttack.attackDamage;
