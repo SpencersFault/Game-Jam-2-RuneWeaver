@@ -89,13 +89,10 @@ public class PlayerStateMachine : MonoBehaviour
 
     void createPlayerDisplay()
     {
-
         playerDisplay = Instantiate(playerDisplay) as GameObject;
         stats = playerDisplay.GetComponent<PlayerStats>();
         stats.playerName.text = player.playername;
         stats.playerHP.text = "HP: " + player.currentHP;
-      
-        
     }
 
 
@@ -103,7 +100,10 @@ public class PlayerStateMachine : MonoBehaviour
     {
         print(player.currentHP);
         stats.playerHP.text = "HP: " + player.currentHP;
-
+        if (player.currentHP <= player.baseHP)
+        {
+            stats.playerHP = GameObject.Find("PlayerHP").GetComponent<Text>();
+        }
     }
     void DoDamage()
     {
