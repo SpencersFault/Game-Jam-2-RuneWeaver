@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3124284479557457934}
   - component: {fileID: 3124284479557457936}
   - component: {fileID: 3124284479557457937}
+  - component: {fileID: 780565072}
   m_Layer: 5
   m_Name: EnemyDisplay
   m_TagString: Untagged
@@ -78,6 +79,21 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &780565072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124284479557457935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c504ebbd5c88c414aa4cc55d409a8330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: {fileID: 198779652921792224, guid: 81cbca842c1d13749a027e17f3026957,
+    type: 3}
+  enemyHP: {fileID: 3604810885586047734, guid: ce48393cf7993e048ae4506fa913e8a2, type: 3}
 --- !u!1001 &1827736083591238573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,11 +351,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3124284479557457934}
     m_Modifications:
-    - target: {fileID: 7903753949447052906, guid: a7e69407ec902ae4c829c508dc046cf2,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyBar
-      objectReference: {fileID: 0}
     - target: {fileID: 7903753949447052885, guid: a7e69407ec902ae4c829c508dc046cf2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -445,6 +456,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7903753949447052906, guid: a7e69407ec902ae4c829c508dc046cf2,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyBar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7e69407ec902ae4c829c508dc046cf2, type: 3}
 --- !u!224 &3124284479867284929 stripped
@@ -460,11 +476,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3124284479557457934}
     m_Modifications:
-    - target: {fileID: 7800603007612251598, guid: c9391557f12791944ba190bc40575035,
-        type: 3}
-      propertyPath: m_Name
-      value: ProgressBar
-      objectReference: {fileID: 0}
     - target: {fileID: 7800603007612251597, guid: c9391557f12791944ba190bc40575035,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -569,6 +580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800603007612251598, guid: c9391557f12791944ba190bc40575035,
+        type: 3}
+      propertyPath: m_Name
+      value: ProgressBar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9391557f12791944ba190bc40575035, type: 3}

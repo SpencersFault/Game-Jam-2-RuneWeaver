@@ -157,7 +157,7 @@ public class EnemyStateMachine : MonoBehaviour
             currentState = turnState.dead;
             Debug.Log("Victory!");
         }
-
+        UpdateEnemyDisplay();
     }
     public void createPlayerDisplay()
     {
