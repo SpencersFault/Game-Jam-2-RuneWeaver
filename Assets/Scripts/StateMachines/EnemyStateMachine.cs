@@ -29,6 +29,8 @@ public class EnemyStateMachine : MonoBehaviour
     //timeforaction 
     private bool actionStarted = false;
     public GameObject PlayerToAttack;
+    private EnemyStats stats;
+    public GameObject enemyDisplay;
 
     private bool alive = true;
     void Start()
@@ -155,6 +157,22 @@ public class EnemyStateMachine : MonoBehaviour
             currentState = turnState.dead;
             Debug.Log("Victory!");
         }
+
+    }
+    public void createPlayerDisplay()
+    {
+        enemyDisplay = Instantiate(enemyDisplay) as GameObject;
+        stats = enemyDisplay.GetComponent<EnemyStats>();
+        stats.enemyName.text = enemy.enemyname;
+        stats.enemyHP.text = "HP: " + enemy.currentHP;
+        
+
+    }
+
+
+    public void UpdateEnemyDisplay()
+    {
+        stats.enemyHP.text = "HP: " + enemy.currentHP;
 
     }
 }

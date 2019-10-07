@@ -7,7 +7,7 @@ public class Selector : MonoBehaviour
 {
     private bool isSelected = false;
 
-   
+    public string runetrait;
     private void OnMouseDown()
     {
         Vector3 mousePos;

@@ -608,6 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8f4f26c9685f34087f22d68ee059e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runetrait: 
 --- !u!61 &609608981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -667,6 +668,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &780565069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3124284479557457935, guid: 360aa998346b21e488a4248ab45638e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3124284478882863841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &780565072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780565069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c504ebbd5c88c414aa4cc55d409a8330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: {fileID: 198779652921792224, guid: 81cbca842c1d13749a027e17f3026957,
+    type: 3}
+  enemyHP: {fileID: 3604810885586047734, guid: ce48393cf7993e048ae4506fa913e8a2, type: 3}
 --- !u!1 &926267717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8f4f26c9685f34087f22d68ee059e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runetrait: 
 --- !u!61 &1604771253
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1340,6 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8f4f26c9685f34087f22d68ee059e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runetrait: 
 --- !u!61 &1935622561
 BoxCollider2D:
   m_ObjectHideFlags: 0
