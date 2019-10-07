@@ -7,7 +7,7 @@ public class RunePlacement : MonoBehaviour
 
     public List<GameObject> grid = new List<GameObject>();
     private GameObject[] gridHolder = new GameObject[9];
-    public string runeTrait = "Fire";
+    public string runeTrait;
     private GameObject holder;
     private GameObject current;
 
