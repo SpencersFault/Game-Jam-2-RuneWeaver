@@ -7,7 +7,11 @@ public class Selector : MonoBehaviour
 {
     private bool isSelected = false;
 
-   
+    public Selector(bool isSelected)
+    {
+        this.isSelected = isSelected;
+    }
+
     private void OnMouseDown()
     {
         Vector3 mousePos;
