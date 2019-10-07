@@ -17,46 +17,46 @@ public class SpellMaker : MonoBehaviour
     private Color isPink = new Color(1.0f, 0.0f, 1.0f, 1.0f);
     private Color isYellow = new Color(1.0f, 0.92f, 0.016f, 1.0f);
     private Color isBlack = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+    private Color isWhite = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
     private int[] colours = new int[5];
 
     private bool reverse;
 
-    public List<GameObject> gridElements = new List<GameObject>();
+    private GameObject[] gridHolder = new GameObject[9];
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         colourCounter();
     }
 
     private void colourCounter()
     {
-
-        var gridElements = GameObject.FindGameObjectsWithTag("gridElement");
-        foreach (GameObject gridPiece in gridElements)
+        GameObject[] gridHolder = GameObject.FindGameObjectsWithTag("gridElement");
+        for (int i = 0; i < 9; i++)
         {
-            var gridSprite = gridPiece.GetComponent<SpriteRenderer>();
-            if (gridSprite.color == isRed)
+            var gridSprite = gridHolder[i].GetComponent<SpriteRenderer>().color;
+            if (gridSprite == isRed)
             {
                 colours[0] = colours[0] + 1;
             }
-            if (gridSprite.color == isBlue)
+            if (gridSprite == isBlue)
             {
                 colours[1] = colours[1] + 1;
             }
-            if (gridSprite.color == isGreen)
+            if (gridSprite == isGreen)
             {
                 colours[2] = colours[2] + 1;
             }
-            if (gridSprite.color == isYellow)
+            if (gridSprite == isYellow)
             {
                 colours[3] = colours[3] + 1;
             }
-            if (gridSprite.color == isPink)
+            if (gridSprite == isPink)
             {
                 colours[4] = colours[4] + 1;
             }
-            if (gridSprite.color == isBlack)
+            if (gridSprite == isBlack)
             {
                 reverse = true;
             }
@@ -125,7 +125,12 @@ public class SpellMaker : MonoBehaviour
 
     private void Cast(string spell)
     {
-        Debug.Log("You cast" + spell);
+        Debug.Log("You cast " + spell + "!");
+        GameObject[] gridHolder = GameObject.FindGameObjectsWithTag("gridElement");
+        for (int i = 0; i < 9; i++)
+        {
+            gridHolder[i].GetComponent<SpriteRenderer>().color = isWhite;
+        }
     }
 
 

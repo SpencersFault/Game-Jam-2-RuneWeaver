@@ -43,33 +43,48 @@ public class RunePlacement : MonoBehaviour
 
                 if (runeTrait == "Fire")
                 {
-                    current.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 0f, 0.5f);
-                    gridHolder[thisIndex + 1].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 0f, 0.5f);
-                    gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 0f, 0.5f);
+                    if (gridHolder[thisIndex + 1].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 1].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 1].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 1].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 1].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 1].GetComponent<SpriteRenderer>().color != isBlack && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isBlack)
+                    {
+                        current.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 0f, 0.5f);
+                        gridHolder[thisIndex + 1].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 0f, 0.5f);
+                        gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 0f, 0.5f);
+                    }
                 }
                 else if (runeTrait == "Water")
                 {
-                    current.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 1.0f, 0.5f);
-                    gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 1.0f, 0.5f);
-                    gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 1.0f, 0.5f);
+                    if (gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color != isBlack && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isBlack)
+                    {
+                        current.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 1.0f, 0.5f);
+                        gridHolder[thisIndex + 3].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 1.0f, 0.5f);
+                        gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 1.0f, 0.5f);
+                    }
                 }
                 else if (runeTrait == "Air")
                 {
-                    current.GetComponent<SpriteRenderer>().color = new Color(0f, 1.0f, 0f, 0.5f);
-                    gridHolder[thisIndex + 4].GetComponent<SpriteRenderer>().color = new Color(0f, 1.0f, 0f, 0.5f);
-                    gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color = new Color(0f, 1.0f, 0f, 0.5f);
+                    if (gridHolder[thisIndex + 4].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 4].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 4].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 4].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 4].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 4].GetComponent<SpriteRenderer>().color != isBlack && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isBlack)
+                    {
+                        current.GetComponent<SpriteRenderer>().color = new Color(0f, 1.0f, 0f, 0.5f);
+                        gridHolder[thisIndex + 4].GetComponent<SpriteRenderer>().color = new Color(0f, 1.0f, 0f, 0.5f);
+                        gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color = new Color(0f, 1.0f, 0f, 0.5f);
+                    }
                 }
                 else if (runeTrait == "Earth")
                 {
-                    current.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.92f, 0.016f, 0.5f);
-                    gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.92f, 0.016f, 0.5f);
-                    gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.92f, 0.016f, 0.5f);
+                    if (gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isBlack && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color != isBlack)
+                    {
+                        current.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.92f, 0.016f, 0.5f);
+                        gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.92f, 0.016f, 0.5f);
+                        gridHolder[thisIndex + 7].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.92f, 0.016f, 0.5f);
+                    }
                 }
                 else if (runeTrait == "Charm")
                 {
-                    current.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 1.0f, 0.5f);
-                    gridHolder[thisIndex + 2].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 1.0f, 0.5f);
-                    gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 1.0f, 0.5f);
+                    if (gridHolder[thisIndex + 2].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 2].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 2].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 2].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 2].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 2].GetComponent<SpriteRenderer>().color != isBlack && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isRed && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isBlue && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isGreen && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isYellow && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isPink && gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color != isBlack)
+                    {
+                        current.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 1.0f, 0.5f);
+                        gridHolder[thisIndex + 2].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 1.0f, 0.5f);
+                        gridHolder[thisIndex + 6].GetComponent<SpriteRenderer>().color = new Color(1.0f, 0f, 1.0f, 0.5f);
+                    }
                 }
                 else if (runeTrait == "Flux")
                 {
