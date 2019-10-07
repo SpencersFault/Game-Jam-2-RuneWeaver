@@ -11,12 +11,12 @@ public class SpellMaker : MonoBehaviour
     private int charm;
     private bool flux = false;
 
-    private Color isRed = new Color(1.0f, 0.0f, 0.0f);
-    private Color isGreen = new Color(0.0f, 1.0f, 0.0f);
-    private Color isBlue = new Color(0.0f, 0.0f, 1.0f);
-    private Color isPink = new Color(1.0f, 0.0f, 1.0f);
-    private Color isYellow = new Color(1.0f, 0.92f, 0.016f);
-    private Color isBlack = new Color(0.0f, 0.0f, 0.0f);
+    private Color isRed = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+    private Color isGreen = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+    private Color isBlue = new Color(0.0f, 0.0f, 1.0f, 1.0f);
+    private Color isPink = new Color(1.0f, 0.0f, 1.0f, 1.0f);
+    private Color isYellow = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+    private Color isBlack = new Color(0.0f, 0.0f, 0.0f, 1.0f);
 
     private int[] colours = new int[5];
 
