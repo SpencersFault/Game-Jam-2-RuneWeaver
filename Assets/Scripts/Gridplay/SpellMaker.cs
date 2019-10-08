@@ -78,82 +78,234 @@ public class SpellMaker : MonoBehaviour
         charm = colours[4]; //pink
         flux = reverse; //black
 
+        // when flux is INACTIVE
         if (flux == false)
         {
-            if (fire > 0 && water == 0 && air == 0 && earth == 0 && charm == 0)
+            if (fire > 0)
             {
-                Cast("Fireball");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                Debug.Log("Enemy Slime takes 5 damage");
-                
+
+
+                if (water > 0 && water < 4)
+                {
+                    Cast("Scald");
+                }
+                if (air > 0 && air < 4)
+                {
+                    Cast("Heat Wave");
+                }
+                if (earth > 0 && earth < 4)
+                {
+                    Cast("Blast");
+                }
+                if (charm > 0 && charm < 4)
+                {
+                    Cast("Warm Fuzzies");
+                }
+                if (fire > 0 && water == 0 && air == 0 && earth == 0 && charm == 0)
+                {
+                    if (fire == 3)
+                    {
+                        Cast("Fireball");
+                    }
+                    else if (fire == 6)
+                    {
+                        Cast("Fire Blast");
+                    }
+                }
+            }
+
+            if (water > 0)
+            {
+                if (air > 0 && air < 4)
+                {
+                    Cast("Rainstorm");
+                }
+                if (earth > 0 && earth < 4)
+                {
+                    Cast("Mud");
+                }
+                if (charm > 0 && charm < 4)
+                {
+                    Cast("Perfume");
+                }                
+                if (fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
+                {
+                    if (water == 3)
+                    {
+                        Cast("Drench");
+                    }
+                    if (water == 6)
+                    {
+                        Cast("Soak");
+                    }
+                    if (water == 9)
+                    {
+                        Cast("Deluge");
+                    }
+                }
+                if (air > 0)
+                {
+                    if (earth > 0 && earth < 4)
+                    {
+                        Cast("Sandstorm");
+                    }
+                    if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
+                    {
+                        if (air == 3)
+                        {
+                            Cast("Gust");
+                        }
+                        if (air == 6)
+                        {
+                            Cast("Whirlwind");
+                        }
+                    }
+                }
+                if (earth > 0)
+                {
+                    if (charm > 0 && charm < 4)
+                    {
+                        Cast("Salve");
+                    }
+                    if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
+                    {
+                        if (earth == 3)
+                        {
+                            Cast("Quake");
+                        }
+                    }
+                }
+                if (fire == 0 && water == 0 && air == 0 && earth == 0 && charm > 0)
+                {
+                    if (charm == 3)
+                    {
+                        Cast("Flirt");
+                    }
+                    if (charm == 6)
+                    {
+                        Cast("Infatuate");
+                    }
+                }
 
             }
-            else if(fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
-            {
-                Cast("Drench");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 1f;
-                Debug.Log("Enemy Slime takes 1 damage");
-            }
-            else if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
-            {
-                Cast("Gust");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 3f;
-                Debug.Log("Enemy Slime takes 3 damage");
-            }
-            else if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
-            {
-                Cast("Quake");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
-                Debug.Log("Enemy Slime takes 10 damage");
-            }
-            else if (fire == 0 && water == 0 && air == 0 && earth == 0 && charm > 0)
-            {
-                Cast("Flirt");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 2f;
-                Debug.Log("Enemy Slime is weakened");
-            }
         }
+        // when flux is ACTIVE
+        // fire -> cold
+        // water -> dry
+        // air -> gravity
+        // earth -> death (drain)
+        // charm -> repel
         else if (flux == true)
         {
-            if (fire > 0 && water == 0 && air == 0 && earth == 0 && charm == 0)
+
+
+            if (fire > 0)
             {
-                Cast("Freeze");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
-                Debug.Log("Enemy Slime takes 10 damage");
+                if (water > 0 && water < 4)
+                {
+                    Cast("Snowfall");
+                }
+                if (air > 0 && air < 4)
+                {
+                    Cast("Cold Front");
+                }
+                if (earth > 0 && earth < 4)
+                {
+                    Cast("Tundra");
+                }
+                if (charm > 0 && charm < 4)
+                {
+                    Cast("Cold Shoulder");
+                }
+                if (fire > 0 && water == 0 && air == 0 && earth == 0 && charm == 0)
+                {
+                    if (fire == 3)
+                    {
+                        Cast("Freeze");
+                    }
+                    else if (fire == 6)
+                    {
+                        Cast("Subzero");
+                    }
+                }
+
             }
-            else if (fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
+
+            if (water > 0)
             {
-                Cast("Parch");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 50f;
-                Debug.Log("Enemy Slime takes 50 damage");
-            }
-            else if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
-            {
-                Cast("Vacuum");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 100f;
-                Debug.Log("Enemy Slime is captured");
-            }
-            else if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
-            {
-                Cast("Stabilize");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP += 10f;
-                Debug.Log("Enemy Slime heals by 10");
-            }
-            else if (fire == 0 && water == 0 && air == 0 && earth == 0 && charm > 0)
-            {
-                Cast("Disgust");
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
-                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 100f;
-                Debug.Log("Enemy Slime runs away");
+
+
+                if (air > 0 && air < 4)
+                {
+                    Cast("Hailstorm");
+                }
+                if (earth > 0 && earth < 4)
+                {
+                    Cast("Swamp");
+                }
+                if (charm > 0 && charm < 4)
+                {
+                    Cast("Stench");
+                }
+                if (fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
+                {
+                    if (water == 3)
+                    {
+                        Cast("Parch");
+                    }
+                    if (water == 6)
+                    {
+                        Cast("Evaporate");
+                    }
+                    if (water == 9)
+                    {
+                        Cast("Drought");
+                    }
+                }
+                if (air > 0)
+                {
+                    if (earth > 0 && earth < 4)
+                    {
+                        Cast("Pale Wind");
+                    }
+                    if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
+                    {
+                        if (air == 3)
+                        {
+                            Cast("Slow");
+                        }
+                        if (air == 6)
+                        {
+                            Cast("Crush");
+                        }
+                    }
+                }
+                if (earth > 0)
+                {
+                    if (charm > 0 && charm < 4)
+                    {
+                        Cast("Poison");
+                    }
+                    if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
+                    {
+                        if (earth == 3)
+                        {
+                            Cast("Drain");
+                        }
+                    }
+                }
+                if (fire == 0 && water == 0 && air == 0 && earth == 0 && charm > 0)
+                {
+                    if (charm == 3)
+                    {
+                        Cast("Repel");
+                    }
+                    if (charm == 6)
+                    {
+                        Cast("Disgust");
+                    }
+                }
+
             }
         }
 
@@ -166,6 +318,10 @@ public class SpellMaker : MonoBehaviour
         for (int i = 0; i < 9; i++)
         {
             gridHolder[i].GetComponent<SpriteRenderer>().color = isWhite;
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            colours[i] = 0;
         }
     }
     
