@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpellMaker : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class SpellMaker : MonoBehaviour
 
     private GameObject[] gridHolder = new GameObject[9];
 
+    private GameObject enemy;
+    private GameObject ActionDisplay;
+    
     public void OnMouseDown()
     {
         colourCounter();
@@ -79,22 +83,39 @@ public class SpellMaker : MonoBehaviour
             if (fire > 0 && water == 0 && air == 0 && earth == 0 && charm == 0)
             {
                 Cast("Fireball");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                Debug.Log("Enemy Slime takes 5 damage");
+                
+
             }
             else if(fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
             {
                 Cast("Drench");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 1f;
+                Debug.Log("Enemy Slime takes 1 damage");
             }
             else if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
             {
                 Cast("Gust");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 3f;
+                Debug.Log("Enemy Slime takes 3 damage");
             }
             else if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
             {
                 Cast("Quake");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
+                Debug.Log("Enemy Slime takes 10 damage");
             }
             else if (fire == 0 && water == 0 && air == 0 && earth == 0 && charm > 0)
             {
                 Cast("Flirt");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 2f;
+                Debug.Log("Enemy Slime is weakened");
             }
         }
         else if (flux == true)
@@ -102,22 +123,37 @@ public class SpellMaker : MonoBehaviour
             if (fire > 0 && water == 0 && air == 0 && earth == 0 && charm == 0)
             {
                 Cast("Freeze");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
+                Debug.Log("Enemy Slime takes 10 damage");
             }
             else if (fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
             {
                 Cast("Parch");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 50f;
+                Debug.Log("Enemy Slime takes 50 damage");
             }
             else if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
             {
                 Cast("Vacuum");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 100f;
+                Debug.Log("Enemy Slime is captured");
             }
             else if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
             {
                 Cast("Stabilize");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP += 10f;
+                Debug.Log("Enemy Slime heals by 10");
             }
             else if (fire == 0 && water == 0 && air == 0 && earth == 0 && charm > 0)
             {
                 Cast("Disgust");
+                enemy = GameObject.FindGameObjectWithTag("Enemy");
+                enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 100f;
+                Debug.Log("Enemy Slime runs away");
             }
         }
 
@@ -132,7 +168,7 @@ public class SpellMaker : MonoBehaviour
             gridHolder[i].GetComponent<SpriteRenderer>().color = isWhite;
         }
     }
-
+    
 
     // Start is called before the first frame update
     void Start()

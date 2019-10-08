@@ -107,8 +107,10 @@ public class PlayerStateMachine : MonoBehaviour
     }
     void DoDamage()
     {
-        //float calc_damage = player.currentATK + BSM.PerformList[0].choosenAttack.attackDamage;
+        
+        //float calc_damage = player.
         //PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
+        
     }
 
 }

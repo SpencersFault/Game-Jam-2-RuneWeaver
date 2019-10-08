@@ -63,20 +63,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Abilities\baseAttack.cs" />
+    <Compile Include="Assets\Scripts\Abilities\Drench.cs" />
     <Compile Include="Assets\Scripts\Abilities\Flame.cs" />
     <Compile Include="Assets\Scripts\Abilities\GlobAbility.cs" />
     <Compile Include="Assets\Scripts\Abilities\TackleAbility.cs" />
     <Compile Include="Assets\Scripts\Character\EnemySlime.cs" />
     <Compile Include="Assets\Scripts\Character\Player.cs" />
-    <Compile Include="Assets\Scripts\Gridplay\CastConfirm.cs" />
     <Compile Include="Assets\Scripts\Gridplay\CombatGrid.cs" />
+    <Compile Include="Assets\Scripts\Gridplay\ResetGrid.cs" />
+    <Compile Include="Assets\Scripts\Gridplay\RunePlacement.cs" />
+    <Compile Include="Assets\Scripts\Gridplay\Selector.cs" />
     <Compile Include="Assets\Scripts\Gridplay\SpellMaker.cs" />
-    <Compile Include="Assets\Scripts\HandleTurn.cs" />
-    <Compile Include="Assets\Scripts\ResetGrid.cs" />
-    <Compile Include="Assets\Scripts\RunePlacement.cs" />
-    <Compile Include="Assets\Scripts\Selector.cs" />
     <Compile Include="Assets\Scripts\StateMachines\BattleStateMachine.cs" />
     <Compile Include="Assets\Scripts\StateMachines\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Scripts\StateMachines\HandleTurn.cs" />
     <Compile Include="Assets\Scripts\StateMachines\PlayerStateMachine.cs" />
     <Compile Include="Assets\Scripts\UI\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerStats.cs" />

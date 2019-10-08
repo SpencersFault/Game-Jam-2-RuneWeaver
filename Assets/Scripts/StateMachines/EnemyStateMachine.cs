@@ -22,7 +22,7 @@ public class EnemyStateMachine : MonoBehaviour
     private float currentCooldown = 0f;
     private float maxCooldown = 5f;
     public Image progressbar;
-    public Text enemyHealth;
+    public Text EnemyHP;
 
     //this gameobject
     private Vector2 startPosition;
@@ -31,6 +31,9 @@ public class EnemyStateMachine : MonoBehaviour
     public GameObject PlayerToAttack;
     private EnemyStats stats;
     public GameObject enemyDisplay;
+
+    public bool fadeOut;
+    SpriteRenderer rend;
 
     private bool alive = true;
     void Start()
@@ -148,31 +151,52 @@ public class EnemyStateMachine : MonoBehaviour
         float calc_damage = enemy.currentATK + BSM.PerformList [0].choosenAttack.attackDamage;
         PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
     }
+
+    void fade()
+    {
+        if (fadeOut == true)
+        {
+            rend = GetComponent<SpriteRenderer>();
+
+        }
+    }
+
     public void TakeDamage(float getDamageAmount)
     {
         enemy.currentHP -= getDamageAmount;
         
         if (enemy.currentHP <= 0)
         {
+
+            fadeOut = true;
             currentState = turnState.dead;
             Debug.Log("Victory!");
+
         }
         UpdateEnemyDisplay();
     }
-    public void createPlayerDisplay()
+    public void createEnemyDisplay()
     {
         enemyDisplay = Instantiate(enemyDisplay) as GameObject;
         stats = enemyDisplay.GetComponent<EnemyStats>();
+        
         stats.enemyName.text = enemy.enemyname;
         stats.enemyHP.text = "HP: " + enemy.currentHP;
-        
+        if (enemy.currentHP <= enemy.baseHP)
+        {
+            stats.enemyHP = GameObject.Find("EnemyHP").GetComponent<Text>();
+        }
 
     }
 
 
     public void UpdateEnemyDisplay()
     {
+        print(enemy.currentHP);
         stats.enemyHP.text = "HP: " + enemy.currentHP;
-
+        if (enemy.currentHP <= enemy.baseHP)
+        {
+            stats.enemyHP = GameObject.Find("EnemyHP").GetComponent<Text>();
+        }
     }
 }

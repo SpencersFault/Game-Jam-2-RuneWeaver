@@ -10,8 +10,10 @@ public class Player
    
     public float baseHP;
     public float currentHP;
-    
-    
+
+    public float baseATK;
+
+    public List<baseAttack> attacks = new List<baseAttack>();
     // Start is called before the first frame update
     void Start()
     {
