@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStateMachine : MonoBehaviour
 {
     public Player player;
     private BattleStateMachine BSM;
+    
+    
 
     public enum turnState
     {
@@ -14,12 +17,17 @@ public class PlayerStateMachine : MonoBehaviour
     }
     public turnState currentState;
     //for the health bar
-
+    
     //this gameobject
     private Vector2 startPosition;
     private bool alive = true;
+    private PlayerStats stats;
+    public GameObject playerDisplay;
     void Start()
     {
+        //create panel, fill in info
+        createPlayerDisplay();
+
         currentState = turnState.alive;
         BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine>();
         startPosition = transform.position;
@@ -63,16 +71,46 @@ public class PlayerStateMachine : MonoBehaviour
                 }
                 break;
         }
+
     }
+   
     public void TakeDamage(float getDamageAmount)
     {
         player.currentHP -= getDamageAmount;
+        
         if(player.currentHP <= 0)
         {
+            player.currentHP = 0;
             currentState = turnState.dead;
             Debug.Log("Game Over");
         }
-     
+        UpdatePlayerDisplay();
     }
-    
+
+    void createPlayerDisplay()
+    {
+        playerDisplay = Instantiate(playerDisplay) as GameObject;
+        stats = playerDisplay.GetComponent<PlayerStats>();
+        stats.playerName.text = player.playername;
+        stats.playerHP.text = "HP: " + player.currentHP;
+    }
+
+
+    void UpdatePlayerDisplay()
+    {
+        print(player.currentHP);
+        stats.playerHP.text = "HP: " + player.currentHP;
+        if (player.currentHP <= player.baseHP)
+        {
+            stats.playerHP = GameObject.Find("PlayerHP").GetComponent<Text>();
+        }
+    }
+    void DoDamage()
+    {
+        
+        //float calc_damage = player.
+        //PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
+        
+    }
+
 }

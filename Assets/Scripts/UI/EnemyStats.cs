@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class Player
+public class EnemyStats : MonoBehaviour
 {
-    public string playername;
-
-    public float baseHP;
-    public float currentHP;
-
-    
+    public Text enemyName;
+    public Text enemyHP;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +16,6 @@ public class Player
     // Update is called once per frame
     void Update()
     {
-    
+        
     }
 }

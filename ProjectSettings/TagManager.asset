@@ -10,6 +10,7 @@ TagManager:
   - DeadEnemy
   - Rune
   - gridElement
+  - Action
   layers:
   - Default
   - TransparentFX

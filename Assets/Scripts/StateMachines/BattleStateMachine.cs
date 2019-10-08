@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class BattleStateMachine : MonoBehaviour
@@ -22,6 +23,7 @@ public class BattleStateMachine : MonoBehaviour
     public List<GameObject> PlayerInBattle = new List<GameObject>();
     public List<GameObject> EnemyInBattle = new List<GameObject>();
 
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -108,4 +110,6 @@ public class BattleStateMachine : MonoBehaviour
     {
         PerformList.Add(input);
     }
+
+    
 }

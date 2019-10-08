@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class CombatGrid : MonoBehaviour
 {
+
     public int dimensions;
     private int vertical;
     private int horizontal;
     public Sprite sprite;
     public float[,] runeSheet;
     int columns, rows;
+
+    Collider thisCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +39,9 @@ public class CombatGrid : MonoBehaviour
         runeElement.transform.position = new Vector3(x - 1.25f,y - 1.25f);
         runeElement.tag = "gridElement";
         runeElement.AddComponent<RunePlacement>();
-        runeElement.AddComponent<CircleCollider2D>();
+        var collider = runeElement.AddComponent<CircleCollider2D>();
         var icon = runeElement.AddComponent<SpriteRenderer>();
+        collider.isTrigger = true;
         icon.sprite = sprite;
         icon.color = new Color(value, value, value);
             }
