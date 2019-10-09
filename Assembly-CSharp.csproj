@@ -62,8 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\PlayerMoovement.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
+=======
+    <Compile Include="Assets\Character\PlayerController.cs" />
+    <Compile Include="Assets\scr.cs" />
+    <Compile Include="Assets\Script.cs" />
+>>>>>>> parent of 7bf3fdc... New
     <Compile Include="Assets\Scripts\Abilities\baseAttack.cs" />
     <Compile Include="Assets\Scripts\Abilities\Flame.cs" />
     <Compile Include="Assets\Scripts\Abilities\GlobAbility.cs" />
