@@ -22,7 +22,7 @@ public class EnemyStateMachine : MonoBehaviour
     private float currentCooldown = 0f;
     private float maxCooldown = 5f;
     public Image progressbar;
-    public Text EnemyHP;
+    
 
     //this gameobject
     private Vector2 startPosition;
@@ -30,14 +30,12 @@ public class EnemyStateMachine : MonoBehaviour
     private bool actionStarted = false;
     public GameObject PlayerToAttack;
     private EnemyStats stats;
-    public GameObject enemyDisplay;
-
-    public bool fadeOut;
-    SpriteRenderer rend;
+    public GameObject EnemyDisplay;
 
     private bool alive = true;
     void Start()
     {
+        createEnemyDisplay();
         currentState = turnState.processing;
         BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine>();
         startPosition = transform.position;
@@ -74,13 +72,29 @@ public class EnemyStateMachine : MonoBehaviour
                 }
                 else
                 {
+                    alive = false;
                     //change tag of enemy
                     this.gameObject.tag = "DeadEnemy";
                     //not attackable
                     BSM.EnemyInBattle.Remove(this.gameObject);
+                    if (BSM.EnemyInBattle.Count > 0)
+                    {
+                        for (int i = 0; i < BSM.PerformList.Count; i++)
+                        {
+                            if (BSM.PerformList[i].AttacksGameObject = this.gameObject)
+                            {
+                                BSM.PerformList.Remove(BSM.PerformList[i]);
+                            }
+                            if (BSM.PerformList[i].AttackersTarget == this.gameObject)
+                            {
+                                BSM.PerformList[i].AttackersTarget = BSM.EnemyInBattle[Random.Range(0, BSM.EnemyInBattle.Count)];
+                            }
+                        }
+                    }
                     //dead animation
-                    //this.gameObject.GetComponent<SpriteRenderer>().
-                    alive = false;
+                    this.gameObject.GetComponent<SpriteRenderer>().color = new Color32(105, 105, 105, 255);
+                    BSM.battleState = BattleStateMachine.performAction.CheckAlive;
+                    
                 }
                 break;
         }
@@ -152,51 +166,30 @@ public class EnemyStateMachine : MonoBehaviour
         PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
     }
 
-    void fade()
-    {
-        if (fadeOut == true)
-        {
-            rend = GetComponent<SpriteRenderer>();
-
-        }
-    }
-
     public void TakeDamage(float getDamageAmount)
     {
-        enemy.currentHP -= getDamageAmount;
+        enemy.currentHP = getDamageAmount;
         
         if (enemy.currentHP <= 0)
         {
-
-            fadeOut = true;
+            alive = false;
             currentState = turnState.dead;
-            Debug.Log("Victory!");
 
         }
         UpdateEnemyDisplay();
     }
-    public void createEnemyDisplay()
+    void createEnemyDisplay()
     {
-        enemyDisplay = Instantiate(enemyDisplay) as GameObject;
-        stats = enemyDisplay.GetComponent<EnemyStats>();
-        
+        EnemyDisplay = Instantiate(EnemyDisplay) as GameObject;
+        stats = EnemyDisplay.GetComponent<EnemyStats>();
         stats.enemyName.text = enemy.enemyname;
         stats.enemyHP.text = "HP: " + enemy.currentHP;
-        if (enemy.currentHP <= enemy.baseHP)
-        {
-            stats.enemyHP = GameObject.Find("EnemyHP").GetComponent<Text>();
-        }
 
     }
 
-
-    public void UpdateEnemyDisplay()
+    void UpdateEnemyDisplay()
     {
-        print(enemy.currentHP);
         stats.enemyHP.text = "HP: " + enemy.currentHP;
-        if (enemy.currentHP <= enemy.baseHP)
-        {
-            stats.enemyHP = GameObject.Find("EnemyHP").GetComponent<Text>();
-        }
     }
+
 }

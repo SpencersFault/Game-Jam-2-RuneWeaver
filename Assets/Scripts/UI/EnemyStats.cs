@@ -7,15 +7,5 @@ public class EnemyStats : MonoBehaviour
 {
     public Text enemyName;
     public Text enemyHP;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Image ProgressBar;
 }
