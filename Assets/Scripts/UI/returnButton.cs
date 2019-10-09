@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class returnButton : MonoBehaviour
 {
-    public void OnMouseDown()
+    public void OnMouseUp()
     {
         SceneManager.LoadScene("MainMap", LoadSceneMode.Additive);
     }

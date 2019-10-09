@@ -82,7 +82,6 @@ public class PlayerStateMachine : MonoBehaviour
         {
             player.currentHP = 0;
             currentState = turnState.dead;
-            Debug.Log("Game Over");
         }
         UpdatePlayerDisplay();
     }

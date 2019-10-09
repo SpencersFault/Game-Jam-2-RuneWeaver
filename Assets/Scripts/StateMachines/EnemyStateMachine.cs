@@ -41,7 +41,7 @@ public class EnemyStateMachine : MonoBehaviour
         startPosition = transform.position;
     }
 
-    void Update()
+    public void Update()
     {
         //Debug.Log (currentState);
         switch (currentState)
@@ -77,10 +77,9 @@ public class EnemyStateMachine : MonoBehaviour
                     this.gameObject.tag = "DeadEnemy";
                     //not attackable
                     BSM.EnemyInBattle.Remove(this.gameObject);
-                    if (BSM.EnemyInBattle.Count > 0)
-                    {
-                        for (int i = 0; i < BSM.PerformList.Count; i++)
-                        {
+                    
+                    for (int i = 0; i < BSM.PerformList.Count; i++)
+                     {
                             if (BSM.PerformList[i].AttacksGameObject = this.gameObject)
                             {
                                 BSM.PerformList.Remove(BSM.PerformList[i]);
@@ -89,8 +88,8 @@ public class EnemyStateMachine : MonoBehaviour
                             {
                                 BSM.PerformList[i].AttackersTarget = BSM.EnemyInBattle[Random.Range(0, BSM.EnemyInBattle.Count)];
                             }
-                        }
-                    }
+                      }
+                    
                     //dead animation
                     this.gameObject.GetComponent<SpriteRenderer>().color = new Color32(105, 105, 105, 255);
                     BSM.battleState = BattleStateMachine.performAction.CheckAlive;
@@ -160,16 +159,17 @@ public class EnemyStateMachine : MonoBehaviour
         PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
     }
 
-    public void Hurt()
+    void Hurt(float getDamageAmount)
     {
-
-        if (enemy.currentHP > 0)
+        enemy.currentHP -= getDamageAmount;
+        UpdateEnemyDisplay();
+        if (enemy.currentHP <= 0f)
         {
             alive = false;
             currentState = turnState.dead;
 
         }
-        UpdateEnemyDisplay();
+        
     }
     void createEnemyDisplay()
     {
@@ -182,7 +182,13 @@ public class EnemyStateMachine : MonoBehaviour
 
     void UpdateEnemyDisplay()
     {
+        print(enemy.currentHP);
         stats.enemyHP.text = "HP: " + enemy.currentHP;
+        if (enemy.currentHP <= enemy.baseHP)
+        {
+            stats.enemyHP = GameObject.Find("EnemyHP").GetComponent<Text>();
+        }
     }
+
 
 }

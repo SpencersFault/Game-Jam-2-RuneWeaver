@@ -64,8 +64,6 @@
   <ItemGroup>
     <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Abilities\baseAttack.cs" />
-    <Compile Include="Assets\Scripts\Abilities\Drench.cs" />
-    <Compile Include="Assets\Scripts\Abilities\Flame.cs" />
     <Compile Include="Assets\Scripts\Abilities\GlobAbility.cs" />
     <Compile Include="Assets\Scripts\Abilities\TackleAbility.cs" />
     <Compile Include="Assets\Scripts\Character\EnemySlime.cs" />

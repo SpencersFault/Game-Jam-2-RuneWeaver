@@ -87,29 +87,29 @@ public class SpellMaker : MonoBehaviour
                 {
                     Cast("Scald");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 20f;
+                    Debug.Log("Enemy Slime takes 20 damage");
                 }
                 if (air > 0 && air < 4)
                 {
                     Cast("Heat Wave");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 30f;
+                    Debug.Log("Enemy Slime takes 30 damage");
                 }
                 if (earth > 0 && earth < 4)
                 {
                     Cast("Blast");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 60f;
+                    Debug.Log("Enemy Slime takes 60 damage");
                 }
                 if (charm > 0 && charm < 4)
                 {
                     Cast("Warm Fuzzies");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP += 1f;
+                    Debug.Log("Enemy Slime heals for 1");
                 }
                 if (fire > 0 && water == 0 && air == 0 && earth == 0 && charm == 0)
                 {
@@ -117,15 +117,15 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Fireball");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 50f;
+                        Debug.Log("Enemy Slime takes 50 damage");
                     }
                     else if (fire == 6)
                     {
                         Cast("Fire Blast");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 75f;
+                        Debug.Log("Enemy Slime takes 75 damage");
                     }
                 }
             }
@@ -142,15 +142,15 @@ public class SpellMaker : MonoBehaviour
                 {
                     Cast("Mud");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
                     Debug.Log("Enemy Slime takes 5 damage");
                 }
                 if (charm > 0 && charm < 4)
                 {
                     Cast("Perfume");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 5f;
+                    Debug.Log("Enemy Slime is weakened");
                 }
                 if (fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
                 {
@@ -165,15 +165,15 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Soak");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
+                        Debug.Log("Enemy Slime takes 10 damage");
                     }
                     if (water == 9)
                     {
                         Cast("Deluge");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 15f;
+                        Debug.Log("Enemy Slime takes 15 damage");
                     }
                 }
             }
@@ -183,8 +183,8 @@ public class SpellMaker : MonoBehaviour
                 {
                     Cast("Sandstorm");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 25f;
+                    Debug.Log("Enemy Slime takes 25 damage");
                 }
                 if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
                 {
@@ -192,15 +192,15 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Gust");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 20f;
+                        Debug.Log("Enemy Slime takes 20 damage");
                     }
                     if (air == 6)
                     {
                         Cast("Whirlwind");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 25f;
+                        Debug.Log("Enemy Slime takes 25 damage");
                     }
                 }
             }
@@ -210,8 +210,8 @@ public class SpellMaker : MonoBehaviour
                 {
                     Cast("Salve");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<PlayerStateMachine>().player.currentHP += 25f;
+                    Debug.Log("You heal for 25 damage");
                 }
                 if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
                 {
@@ -219,8 +219,8 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Quake");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 30f;
+                        Debug.Log("Enemy Slime takes 30 damage");
                     }
                 }
             }
@@ -232,15 +232,15 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Flirt");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 3f;
+                        Debug.Log("Enemy Slime is weakened");
                     }
                     if (charm == 6)
                     {
                         Cast("Infatuate");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 10f;
+                        Debug.Log("Enemy Slime is weakened");
                     }
                 }
             }
@@ -262,29 +262,29 @@ public class SpellMaker : MonoBehaviour
                 {
                     Cast("Snowfall");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
+                    Debug.Log("Enemy Slime takes 10 damage");
                 }
                 if (air > 0 && air < 4)
                 {
                     Cast("Cold Front");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 30f;
+                    Debug.Log("Enemy Slime takes 30 damage");
                 }
                 if (earth > 0 && earth < 4)
                 {
                     Cast("Tundra");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 50f;
+                    Debug.Log("Enemy Slime takes 50 damage");
                 }
                 if (charm > 0 && charm < 4)
                 {
                     Cast("Cold Shoulder");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentATK += 5f;
+                    Debug.Log("Enemy Slime is angered");
                 }
                 if (fire > 0 && water == 0 && air == 0 && earth == 0 && charm == 0)
                 {
@@ -292,15 +292,15 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Freeze");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 30f;
+                        Debug.Log("Enemy Slime takes 30 damage");
                     }
                     else if (fire == 6)
                     {
                         Cast("Subzero");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 50f;
+                        Debug.Log("Enemy Slime takes 50 damage");
                     }
                 }
 
@@ -314,22 +314,22 @@ public class SpellMaker : MonoBehaviour
                 {
                     Cast("Hailstorm");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 25f;
+                    Debug.Log("Enemy Slime takes 25 damage");
                 }
                 if (earth > 0 && earth < 4)
                 {
                     Cast("Swamp");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP += 5f;
+                    Debug.Log("Enemy Slime heals for 5");
                 }
                 if (charm > 0 && charm < 4)
                 {
                     Cast("Stench");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 1f;
+                    Debug.Log("Enemy Slime is hesitant");
                 }
                 if (fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
                 {
@@ -337,22 +337,22 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Parch");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 100f;
+                        Debug.Log("Enemy Slime takes 100 damage");
                     }
                     if (water == 6)
                     {
                         Cast("Evaporate");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 200f;
+                        Debug.Log("Enemy Slime takes 200 damage");
                     }
                     if (water == 9)
                     {
                         Cast("Drought");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 1000f;
+                        Debug.Log("Enemy Slime takes 1000 damage");
                     }
                 }
             }
@@ -362,8 +362,8 @@ public class SpellMaker : MonoBehaviour
                 {
                     Cast("Pale Wind");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                    Debug.Log("Enemy Slime takes 5 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 20f;
+                    Debug.Log("Enemy Slime takes 20 damage");
                 }
                 if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
                 {
@@ -378,8 +378,8 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Crush");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 60f;
+                        Debug.Log("Enemy Slime takes 60 damage");
                     }
                 }
             }
@@ -398,8 +398,9 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Drain");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
+                        enemy.GetComponent<PlayerStateMachine>().player.currentHP += 10f;
+                        Debug.Log("Enemy Slime is drained for 5 damage");
                     }
                 }
             }
@@ -411,15 +412,15 @@ public class SpellMaker : MonoBehaviour
                     {
                         Cast("Repel");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 5f;
+                        Debug.Log("Enemy Slime takes hurts you for less");
                     }
                     if (charm == 6)
                     {
                         Cast("Disgust");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                        Debug.Log("Enemy Slime takes 5 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 1000f;
+                        Debug.Log("Enemy Slime flees");
                     }
                 }
             }
