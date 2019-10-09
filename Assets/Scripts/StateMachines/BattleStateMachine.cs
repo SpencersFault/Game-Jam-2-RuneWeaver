@@ -66,10 +66,7 @@ public class BattleStateMachine : MonoBehaviour
                         }
                     }
                 }
-                if (PerformList[0].Type == "Player")
-                {
-
-                }
+                
                 battleState = performAction.PerformAction;
                 break;
 
@@ -80,11 +77,19 @@ public class BattleStateMachine : MonoBehaviour
                 if (PlayerInBattle.Count < 1)
                 {
                     battleState = performAction.Lose;
+                    for (int i = 0; i < PlayerInBattle.Count; i++)
+                    {
+                        EnemyInBattle[i].GetComponent<EnemyStateMachine>().currentState = EnemyStateMachine.turnState.waiting;
+                    }
                     //lose game
                 }
                 else if (EnemyInBattle.Count < 1)
                 {
                     battleState = performAction.Win;
+                    for (int i = 0; i < PlayerInBattle.Count; i++)
+                    {
+                        PlayerInBattle[i].GetComponent<PlayerStateMachine>().currentState = PlayerStateMachine.turnState.alive;
+                    }
                 }
                 else
                 {
@@ -95,6 +100,7 @@ public class BattleStateMachine : MonoBehaviour
             case (performAction.Win):
                 {
                     Debug.Log("Victory!");
+
                 }
                 break;
 

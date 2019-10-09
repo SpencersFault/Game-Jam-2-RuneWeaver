@@ -105,12 +105,5 @@ public class PlayerStateMachine : MonoBehaviour
             stats.playerHP = GameObject.Find("PlayerHP").GetComponent<Text>();
         }
     }
-    void DoDamage()
-    {
-        
-        //float calc_damage = player.
-        //PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
-        
-    }
 
 }
