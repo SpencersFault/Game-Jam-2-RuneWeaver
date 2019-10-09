@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Gridplay\RunePlacement.cs" />
     <Compile Include="Assets\Scripts\Gridplay\SpellMaker.cs" />
     <Compile Include="Assets\Scripts\HandleTurn.cs" />
+    <Compile Include="Assets\Scripts\InstanceTracker.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Selector.cs" />
     <Compile Include="Assets\Scripts\StateMachines\BattleStateMachine.cs" />
