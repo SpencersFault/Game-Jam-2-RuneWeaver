@@ -63,11 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Character\PlayerController.cs" />
-    <Compile Include="Assets\PlayerMoovement.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
-    <Compile Include="Assets\scr.cs" />
-    <Compile Include="Assets\Script.cs" />
     <Compile Include="Assets\Scripts\Abilities\baseAttack.cs" />
     <Compile Include="Assets\Scripts\Abilities\Flame.cs" />
     <Compile Include="Assets\Scripts\Abilities\GlobAbility.cs" />
