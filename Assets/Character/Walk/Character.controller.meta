@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Tiny RPG Forest/Artwork/sprites/hero/idle/hero-idle-front/Materials/hero-idle-front.mat.meta
+<<<<<<< HEAD
+guid: 1bbba00df4703f043a194054a23e3c0a
+=======
+guid: 7d357264e0b4d3f43b8db0624a3a591d
+>>>>>>> 994db75b6a2131b10b5498dd3bf5487b2172dd55
+=======
+guid: a0b4ee009b08c874f82d7e1322901add
+>>>>>>> parent of 7bf3fdc... New:Assets/Character/Walk/Character.controller.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
