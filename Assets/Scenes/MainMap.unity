@@ -29507,14 +29507,7 @@ Transform:
   - {fileID: 1673025328}
   - {fileID: 1437561216}
   - {fileID: 2080360945}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - {fileID: 1119834217}
-=======
   - {fileID: 2076603707}
->>>>>>> 994db75b6a2131b10b5498dd3bf5487b2172dd55
-=======
->>>>>>> parent of 7bf3fdc... New
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
