@@ -28,7 +28,7 @@ public class SpellMaker : MonoBehaviour
 
     private GameObject enemy;
     private GameObject ActionDisplay;
-    
+
     public void OnMouseDown()
     {
         colourCounter();
@@ -65,7 +65,6 @@ public class SpellMaker : MonoBehaviour
                 reverse = true;
             }
         }
-
         spellCaster(colours, reverse);
     }
 
@@ -81,10 +80,9 @@ public class SpellMaker : MonoBehaviour
         // when flux is INACTIVE
         if (flux == false)
         {
+
             if (fire > 0)
             {
-
-
                 if (water > 0 && water < 4)
                 {
                     Cast("Scald");
@@ -131,7 +129,6 @@ public class SpellMaker : MonoBehaviour
                     }
                 }
             }
-
             if (water > 0)
             {
                 if (air > 0 && air < 4)
@@ -154,7 +151,7 @@ public class SpellMaker : MonoBehaviour
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
                     Debug.Log("Enemy Slime takes 5 damage");
-                }                
+                }
                 if (fire == 0 && water > 0 && air == 0 && earth == 0 && charm == 0)
                 {
                     if (water == 3)
@@ -179,54 +176,56 @@ public class SpellMaker : MonoBehaviour
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
                 }
-
-                if (air > 0)
+            }
+            if (air > 0)
+            {
+                if (earth > 0 && earth < 4)
                 {
-                    if (earth > 0 && earth < 4)
+                    Cast("Sandstorm");
+                    enemy = GameObject.FindGameObjectWithTag("Enemy");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                    Debug.Log("Enemy Slime takes 5 damage");
+                }
+                if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
+                {
+                    if (air == 3)
                     {
-                        Cast("Sandstorm");
+                        Cast("Gust");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
-                    if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
+                    if (air == 6)
                     {
-                        if (air == 3)
-                        {
-                            Cast("Gust");
-                            enemy = GameObject.FindGameObjectWithTag("Enemy");
-                            enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                            Debug.Log("Enemy Slime takes 5 damage");
-                        }
-                        if (air == 6)
-                        {
-                            Cast("Whirlwind");
-                            enemy = GameObject.FindGameObjectWithTag("Enemy");
-                            enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                            Debug.Log("Enemy Slime takes 5 damage");
-                        }
-                    }
-                }
-                if (earth > 0)
-                {
-                    if (charm > 0 && charm < 4)
-                    {
-                        Cast("Salve");
+                        Cast("Whirlwind");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
-                    if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
+                }
+            }
+            if (earth > 0)
+            {
+                if (charm > 0 && charm < 4)
+                {
+                    Cast("Salve");
+                    enemy = GameObject.FindGameObjectWithTag("Enemy");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                    Debug.Log("Enemy Slime takes 5 damage");
+                }
+                if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
+                {
+                    if (earth == 3)
                     {
-                        if (earth == 3)
-                        {
-                            Cast("Quake");
-                            enemy = GameObject.FindGameObjectWithTag("Enemy");
-                            enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                            Debug.Log("Enemy Slime takes 5 damage");
-                        }
+                        Cast("Quake");
+                        enemy = GameObject.FindGameObjectWithTag("Enemy");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                        Debug.Log("Enemy Slime takes 5 damage");
                     }
                 }
+            }
+            if (charm > 0)
+            {
                 if (fire == 0 && water == 0 && air == 0 && earth == 0 && charm > 0)
                 {
                     if (charm == 3)
@@ -244,16 +243,16 @@ public class SpellMaker : MonoBehaviour
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
                 }
-
             }
         }
+
         // when flux is ACTIVE
         // fire -> cold
         // water -> dry
         // air -> gravity
         // earth -> death (drain)
         // charm -> repel
-        else if (flux == true)
+        if (flux == true)
         {
 
 
@@ -356,53 +355,56 @@ public class SpellMaker : MonoBehaviour
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
                 }
-                if (air > 0)
+            }
+            if (air > 0)
+            {
+                if (earth > 0 && earth < 4)
                 {
-                    if (earth > 0 && earth < 4)
+                    Cast("Pale Wind");
+                    enemy = GameObject.FindGameObjectWithTag("Enemy");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                    Debug.Log("Enemy Slime takes 5 damage");
+                }
+                if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
+                {
+                    if (air == 3)
                     {
-                        Cast("Pale Wind");
+                        Cast("Slow");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
-                    if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
+                    if (air == 6)
                     {
-                        if (air == 3)
-                        {
-                            Cast("Slow");
-                            enemy = GameObject.FindGameObjectWithTag("Enemy");
-                            enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                            Debug.Log("Enemy Slime takes 5 damage");
-                        }
-                        if (air == 6)
-                        {
-                            Cast("Crush");
-                            enemy = GameObject.FindGameObjectWithTag("Enemy");
-                            enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                            Debug.Log("Enemy Slime takes 5 damage");
-                        }
-                    }
-                }
-                if (earth > 0)
-                {
-                    if (charm > 0 && charm < 4)
-                    {
-                        Cast("Poison");
+                        Cast("Crush");
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
-                    if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
+                }
+            }
+            if (earth > 0)
+            {
+                if (charm > 0 && charm < 4)
+                {
+                    Cast("Poison");
+                    enemy = GameObject.FindGameObjectWithTag("Enemy");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                    Debug.Log("Enemy Slime takes 5 damage");
+                }
+                if (fire == 0 && water == 0 && air == 0 && earth > 0 && charm == 0)
+                {
+                    if (earth == 3)
                     {
-                        if (earth == 3)
-                        {
-                            Cast("Drain");
-                            enemy = GameObject.FindGameObjectWithTag("Enemy");
-                            enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
-                            Debug.Log("Enemy Slime takes 5 damage");
-                        }
+                        Cast("Drain");
+                        enemy = GameObject.FindGameObjectWithTag("Enemy");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                        Debug.Log("Enemy Slime takes 5 damage");
                     }
                 }
+            }
+            if (charm > 0)
+            {
                 if (fire == 0 && water == 0 && air == 0 && earth == 0 && charm > 0)
                 {
                     if (charm == 3)
@@ -420,11 +422,13 @@ public class SpellMaker : MonoBehaviour
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
                 }
-
             }
+
         }
 
     }
+
+    
 
     private void Cast(string spell)
     {       
@@ -443,8 +447,8 @@ public class SpellMaker : MonoBehaviour
         {
             colours[i] = 0;
         }
-        //ActionDisplay.GetComponent<Text>().text = null;
-        
+			reverse = false;
+
     }
     
 
