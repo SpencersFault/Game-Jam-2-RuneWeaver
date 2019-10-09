@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerMoovement.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Abilities\baseAttack.cs" />
     <Compile Include="Assets\Scripts\Abilities\Flame.cs" />
