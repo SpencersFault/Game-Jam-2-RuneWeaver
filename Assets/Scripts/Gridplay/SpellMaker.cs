@@ -179,6 +179,7 @@ public class SpellMaker : MonoBehaviour
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
                 }
+
                 if (air > 0)
                 {
                     if (earth > 0 && earth < 4)
@@ -429,6 +430,9 @@ public class SpellMaker : MonoBehaviour
     {       
         GameObject ActionDisplay = GameObject.FindGameObjectWithTag("Action");
         ActionDisplay.GetComponent<Text>().text = "You cast " + spell + "!";
+        //yield return new WaitForSeconds(5f)
+        
+
 
         GameObject[] gridHolder = GameObject.FindGameObjectsWithTag("gridElement");
         for (int i = 0; i < 9; i++)
@@ -440,6 +444,7 @@ public class SpellMaker : MonoBehaviour
             colours[i] = 0;
         }
         //ActionDisplay.GetComponent<Text>().text = null;
+        
     }
     
 
