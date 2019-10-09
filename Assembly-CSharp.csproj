@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Gridplay\RunePlacement.cs" />
     <Compile Include="Assets\Scripts\Gridplay\Selector.cs" />
     <Compile Include="Assets\Scripts\Gridplay\SpellMaker.cs" />
+    <Compile Include="Assets\Scripts\InstanceTracker.cs" />
     <Compile Include="Assets\Scripts\StateMachines\BattleStateMachine.cs" />
     <Compile Include="Assets\Scripts\StateMachines\EnemyStateMachine.cs" />
     <Compile Include="Assets\Scripts\StateMachines\HandleTurn.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Scripts\UI\EnemyHP.cs" />
     <Compile Include="Assets\Scripts\UI\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\UI\returnButton.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Graphic.SJH519-000W/Documents/GitHub/Game Jam 2 - Battle/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

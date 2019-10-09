@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class BattleStateMachine : MonoBehaviour
 {
@@ -23,7 +23,15 @@ public class BattleStateMachine : MonoBehaviour
     public List<GameObject> PlayerInBattle = new List<GameObject>();
     public List<GameObject> EnemyInBattle = new List<GameObject>();
 
- 
+    public Text victoryText;
+    public Text loseText;
+    public GameObject rematchButton;
+    public GameObject returnButton;
+    public GameObject resultPanel;
+    public GameObject castButton;
+    public GameObject resetButton;
+    public GameObject actionDisplay;
+    public GameObject actionBar;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +39,15 @@ public class BattleStateMachine : MonoBehaviour
         battleState = performAction.Wait;
         EnemyInBattle.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         PlayerInBattle.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        victoryText.text = "";
+        loseText.text = "";
+        rematchButton.SetActive(false);
+        returnButton.SetActive(false);
+        resultPanel.SetActive(false);
+        castButton.SetActive(true);
+        resetButton.SetActive(true);
+        actionDisplay.SetActive(true);
+        actionBar.SetActive(true);
     }
 
     // Update is called once per frame
@@ -81,6 +98,14 @@ public class BattleStateMachine : MonoBehaviour
                     {
                         EnemyInBattle[i].GetComponent<EnemyStateMachine>().currentState = EnemyStateMachine.turnState.waiting;
                     }
+                    loseText.text = "Game Over";
+                    rematchButton.SetActive(true);
+                    returnButton.SetActive(true);
+                    resultPanel.SetActive(true);
+                    castButton.SetActive(false);
+                    resetButton.SetActive(false);
+                    actionDisplay.SetActive(false);
+                    actionBar.SetActive(false);
                     //lose game
                 }
                 else if (EnemyInBattle.Count < 1)
@@ -90,6 +115,14 @@ public class BattleStateMachine : MonoBehaviour
                     {
                         PlayerInBattle[i].GetComponent<PlayerStateMachine>().currentState = PlayerStateMachine.turnState.alive;
                     }
+                    victoryText.text = "Victory!";
+                    rematchButton.SetActive(true);
+                    returnButton.SetActive(true);
+                    resultPanel.SetActive(true);
+                    castButton.SetActive(false);
+                    resetButton.SetActive(false);
+                    actionDisplay.SetActive(false);
+                    actionBar.SetActive(false);
                 }
                 else
                 {
@@ -100,6 +133,7 @@ public class BattleStateMachine : MonoBehaviour
             case (performAction.Win):
                 {
                     Debug.Log("Victory!");
+                    
 
                 }
                 break;
@@ -117,5 +151,5 @@ public class BattleStateMachine : MonoBehaviour
         PerformList.Add(input);
     }
 
-    
+
 }

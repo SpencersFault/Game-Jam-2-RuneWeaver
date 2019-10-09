@@ -117,7 +117,7 @@ public class EnemyStateMachine : MonoBehaviour
         myAttack.Attacker = enemy.enemyname; 
         myAttack.Type = "Enemy";
         myAttack.AttacksGameObject = this.gameObject;
-        myAttack.AttackersTarget = BSM.PlayerInBattle[Random.Range(0, BSM.PlayerInBattle.Count)]; //selecting player?
+        myAttack.AttackersTarget = BSM.PlayerInBattle[Random.Range(0, BSM.PlayerInBattle.Count)];
 
         int num = Random.Range(0, enemy.attacks.Count);
         myAttack.choosenAttack = enemy.attacks[num];
@@ -134,9 +134,7 @@ public class EnemyStateMachine : MonoBehaviour
         }
 
         actionStarted = true;
-
-        //animate the enemy near the player
-
+        
         {
             yield return null;
         }
@@ -144,11 +142,7 @@ public class EnemyStateMachine : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         //do damage
         DoDamage();
-        //animate back to startposition
-        Vector2 firstPosition = startPosition;
-        {
-            yield return null;
-        }
+        
         //remove this performer from the list in BSM
         BSM.PerformList.RemoveAt(0);
         //reset BSM -> Wait
@@ -166,11 +160,10 @@ public class EnemyStateMachine : MonoBehaviour
         PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
     }
 
-    public void TakeDamage(float getDamageAmount)
+    public void Hurt()
     {
-        enemy.currentHP = getDamageAmount;
-        
-        if (enemy.currentHP <= 0)
+
+        if (enemy.currentHP > 0)
         {
             alive = false;
             currentState = turnState.dead;
