@@ -95,8 +95,17 @@ public class BattleStateMachine : MonoBehaviour
                 if (PlayerInBattle.Count < 1)
                 {
                     battleState = performAction.Lose;
-                    
+
                     //lose game
+                    loseText.text = "Game Over";
+                    rematchButton.SetActive(true);
+                    returnButton.SetActive(true);
+                    resultPanel.SetActive(true);
+                    castButton.SetActive(false);
+                    resetButton.SetActive(false);
+                    actionDisplay.SetActive(false);
+                    actionBar.SetActive(false);
+                    Debug.Log("Game Over");
                 }
                 else if (EnemyInBattle.Count <= 0)
                 {
