@@ -12,6 +12,11 @@ TagManager:
   - gridElement
   - Action
   - Spell
+  - water_shower
+  - air_wand
+  - charm_enemy
+  - fire_enemy
+  - earth_enemy
   layers:
   - Default
   - TransparentFX
