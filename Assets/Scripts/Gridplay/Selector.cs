@@ -31,7 +31,7 @@ public class Selector : MonoBehaviour
             }
         }
         isSelected = true;
-        Debug.Log(runetrait + " Rune is Selected");
+        //Debug.Log(runetrait + " Rune is Selected");
     }
     // Start is called before the first frame update
     private void OnMouseUp()
