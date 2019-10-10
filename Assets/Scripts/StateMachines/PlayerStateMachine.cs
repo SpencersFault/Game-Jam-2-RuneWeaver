@@ -39,7 +39,7 @@ public class PlayerStateMachine : MonoBehaviour
         //Debug.Log (currentState);
         switch (currentState)
         {
-
+            
             case (turnState.dead):
                 if (!alive)
                 {
@@ -70,20 +70,22 @@ public class PlayerStateMachine : MonoBehaviour
                     }
                 }
                 break;
+                
         }
 
     }
-   
+    
     public void TakeDamage(float getDamageAmount)
     {
-        player.currentHP -= getDamageAmount;
         
+        player.currentHP -= getDamageAmount;
+        UpdatePlayerDisplay();
         if(player.currentHP <= 0)
         {
             player.currentHP = 0;
             currentState = turnState.dead;
         }
-        UpdatePlayerDisplay();
+        
     }
 
     void createPlayerDisplay()

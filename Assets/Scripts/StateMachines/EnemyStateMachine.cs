@@ -46,8 +46,9 @@ public class EnemyStateMachine : MonoBehaviour
         switch (currentState)
         {
             case (turnState.processing):
+                Hurt();
                 UpgradeProgressBar();
-    
+
             break;
 
             case (turnState.chooseAction):
@@ -183,7 +184,7 @@ public class EnemyStateMachine : MonoBehaviour
 
     void UpdateEnemyDisplay()
     {
-        print(enemy.currentHP);
+        
         stats.enemyHP.text = "HP: " + enemy.currentHP;
         if (enemy.currentHP <= enemy.baseHP)
         {

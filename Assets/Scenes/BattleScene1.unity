@@ -27410,7 +27410,7 @@ PrefabInstance:
     - target: {fileID: 4272324902596753097, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4272324902596753097, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
@@ -27482,12 +27482,12 @@ PrefabInstance:
     - target: {fileID: 4272324902596753103, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
       propertyPath: enemy.baseHP
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4272324902596753103, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
       propertyPath: enemy.currentHP
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4272324902596753103, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
@@ -27740,7 +27740,7 @@ PrefabInstance:
     - target: {fileID: 7408972356250775810, guid: 6ba8d2398cd0f2b48a2f184be339bd10,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7408972356250775810, guid: 6ba8d2398cd0f2b48a2f184be339bd10,
         type: 3}
