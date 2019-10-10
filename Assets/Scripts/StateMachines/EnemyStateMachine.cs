@@ -17,7 +17,6 @@ public class EnemyStateMachine : MonoBehaviour
         dead
     }
     public turnState currentState;
-    //for the health bar
 
     private float currentCooldown = 0f;
     private float maxCooldown = 5f;
@@ -66,7 +65,7 @@ public class EnemyStateMachine : MonoBehaviour
                 break;
 
             case (turnState.dead):
-                if (!alive)
+                if (alive == true)
                 {
                     return;
                 }
@@ -159,14 +158,16 @@ public class EnemyStateMachine : MonoBehaviour
         PlayerToAttack.GetComponent<PlayerStateMachine>().TakeDamage(calc_damage);
     }
 
-    void Hurt(float getDamageAmount)
+    void Hurt()
     {
-        enemy.currentHP -= getDamageAmount;
+        
         UpdateEnemyDisplay();
         if (enemy.currentHP <= 0f)
         {
             alive = false;
+            enemy.currentHP = 0;
             currentState = turnState.dead;
+            
 
         }
         

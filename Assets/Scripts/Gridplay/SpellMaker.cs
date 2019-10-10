@@ -88,6 +88,8 @@ public class SpellMaker : MonoBehaviour
                     Cast("Scald");
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 20f;
+                   // GameObject.FindGameObjectWithTag("Spell");
+                    //test.GetComponent<ParticleSystem>().Play ();
                     Debug.Log("Enemy Slime takes 20 damage");
                 }
                 if (air > 0 && air < 4)

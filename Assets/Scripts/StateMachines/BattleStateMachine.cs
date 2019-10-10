@@ -32,6 +32,7 @@ public class BattleStateMachine : MonoBehaviour
     public GameObject resetButton;
     public GameObject actionDisplay;
     public GameObject actionBar;
+    public GameObject enemy;
     
     // Start is called before the first frame update
     void Start()
