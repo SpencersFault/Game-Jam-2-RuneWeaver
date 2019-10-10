@@ -27406,12 +27406,12 @@ PrefabInstance:
     - target: {fileID: 4272324902596753103, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
       propertyPath: enemy.baseHP
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4272324902596753103, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
       propertyPath: enemy.currentHP
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4272324902596753103, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
@@ -27486,6 +27486,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1089166340329517966}
     m_Modifications:
+    - target: {fileID: 7680094897928295072, guid: cb2c890b69bc1f4478c1ca2df0065738,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyHP
+      objectReference: {fileID: 0}
     - target: {fileID: 8413225141599817789, guid: cb2c890b69bc1f4478c1ca2df0065738,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27590,11 +27595,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7680094897928295072, guid: cb2c890b69bc1f4478c1ca2df0065738,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyHP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb2c890b69bc1f4478c1ca2df0065738, type: 3}

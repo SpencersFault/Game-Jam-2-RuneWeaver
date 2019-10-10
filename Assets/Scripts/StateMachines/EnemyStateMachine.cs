@@ -65,6 +65,7 @@ public class EnemyStateMachine : MonoBehaviour
                 break;
 
             case (turnState.dead):
+                
                 if (alive == true)
                 {
                     return;
@@ -130,7 +131,7 @@ public class EnemyStateMachine : MonoBehaviour
         {
             yield break;
         }
-
+        Hurt();
         actionStarted = true;
         
         {
@@ -168,7 +169,6 @@ public class EnemyStateMachine : MonoBehaviour
             enemy.currentHP = 0;
             currentState = turnState.dead;
             
-
         }
         
     }

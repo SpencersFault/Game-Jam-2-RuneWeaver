@@ -37,14 +37,20 @@ public class EnemySlime
         public float currentDEF;
 
     public List<baseAttack> attacks = new List<baseAttack>();
+
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       if (currentHP == 0f)
+        {
+            
+            
+        }
 
     }
 

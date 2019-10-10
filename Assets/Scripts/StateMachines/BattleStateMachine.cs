@@ -98,10 +98,17 @@ public class BattleStateMachine : MonoBehaviour
                     
                     //lose game
                 }
-                else if (EnemyInBattle.Count < 1)
+                else if (EnemyInBattle.Count <= 0)
                 {
                     battleState = performAction.Win;
-                   
+                    victoryText.text = "Victory!";
+                    rematchButton.SetActive(true);
+                    returnButton.SetActive(true);
+                    resultPanel.SetActive(true);
+                    castButton.SetActive(false);
+                    resetButton.SetActive(false);
+                    actionDisplay.SetActive(false);
+                    actionBar.SetActive(false);
                 }
                 
                 break;
