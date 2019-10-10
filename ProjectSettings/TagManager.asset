@@ -17,6 +17,12 @@ TagManager:
   - charm_enemy
   - fire_enemy
   - earth_enemy
+  - fire_wand
+  - charm_wand
+  - air_enemy
+  - flux_hailstorm
+  - flux_stench
+  - flux_evaporate
   layers:
   - Default
   - TransparentFX
