@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 168556284}
   - component: {fileID: 168556283}
   - component: {fileID: 168556282}
+  - component: {fileID: 168556285}
   m_Layer: 0
   m_Name: Water
   m_TagString: water_shower
@@ -343,7 +344,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -4993,12 +4994,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168556281}
   m_LocalRotation: {x: -0.6777858, y: 0.2015104, z: -0.2015104, w: 0.6777858}
-  m_LocalPosition: {x: 0.17, y: 2.91, z: -850.5156}
+  m_LocalPosition: {x: 0.17, y: 2.91, z: -5}
   m_LocalScale: {x: 0.4703387, y: 0.817, z: 0.817}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -123.115, y: -90, z: 89.99999}
+--- !u!114 &168556285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168556281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3a816bc256d28458a610a335daeae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &259190307
 GameObject:
   m_ObjectHideFlags: 0
@@ -10126,11 +10139,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384718188}
   m_LocalRotation: {x: -0.51335853, y: 0.4862747, z: -0.4862747, w: 0.51335853}
-  m_LocalPosition: {x: -5.42, y: -0.05, z: -850.5156}
+  m_LocalPosition: {x: -5.42, y: -0.05, z: -5}
   m_LocalScale: {x: 0.5141291, y: 0.5141291, z: 0.77078235}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -176.896, y: -90, z: 89.99999}
 --- !u!1 &478344189
 GameObject:
@@ -11479,7 +11492,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -16129,11 +16142,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053417578}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 5.79, y: -2.03, z: -850.78906}
+  m_LocalPosition: {x: 5.79, y: -2.03, z: -5}
   m_LocalScale: {x: 0.71569, y: 0.71569, z: 0.71569}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1074433778
 GameObject:
@@ -17043,7 +17056,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -21692,13 +21705,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801274357}
-  m_LocalRotation: {x: 0.0009071956, y: -0.70710623, z: 0.70710623, w: -0.0009071957}
-  m_LocalPosition: {x: 5.97, y: 5.6, z: -850.78906}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 6.03, y: -2.12, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: -270.145, y: 90.00001, z: -90.00001}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1935206116
 GameObject:
   m_ObjectHideFlags: 0
@@ -21795,7 +21808,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -26445,11 +26458,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935206116}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 5.72, y: -2.08, z: -850.5156}
+  m_LocalPosition: {x: 5.72, y: -2.08, z: -5}
   m_LocalScale: {x: 0.8, y: 1, z: 0.4125}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1935622557
 GameObject:
@@ -27353,6 +27366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272324902596753100, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4272324902596753097, guid: d2ec7cbdbabe3094b97bb2181b4dd906,
         type: 3}
