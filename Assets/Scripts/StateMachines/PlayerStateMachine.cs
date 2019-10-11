@@ -53,7 +53,7 @@ public class PlayerStateMachine : MonoBehaviour
                     //not attackable by enemy
 
                     //remove item from performlist
-                    if (BSM.PlayerInBattle.Count > 0)
+                    if (BSM.PlayerInBattle.Count < 1)
                     {
                         for (int i = 0; i < BSM.PerformList.Count; i++)
                         {

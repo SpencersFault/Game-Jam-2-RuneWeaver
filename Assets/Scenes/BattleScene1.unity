@@ -10713,7 +10713,7 @@ PrefabInstance:
     - target: {fileID: 3928505134070445263, guid: 91d48a9e06950d44ab1df320758252ba,
         type: 3}
       propertyPath: m_Text
-      value: 'HP: 100'
+      value: 'HP: 150'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d48a9e06950d44ab1df320758252ba, type: 3}
@@ -27935,12 +27935,12 @@ PrefabInstance:
     - target: {fileID: 7408972356250775808, guid: 6ba8d2398cd0f2b48a2f184be339bd10,
         type: 3}
       propertyPath: player.baseHP
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7408972356250775808, guid: 6ba8d2398cd0f2b48a2f184be339bd10,
         type: 3}
       propertyPath: player.currentHP
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7408972356250775808, guid: 6ba8d2398cd0f2b48a2f184be339bd10,
         type: 3}
