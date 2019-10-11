@@ -10052,7 +10052,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &373920783
 GameObject:
@@ -19659,7 +19659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &478344189
 GameObject:
@@ -24842,7 +24842,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: -138.59799, y: -90, z: 89.99999}
 --- !u!1001 &578899712
 PrefabInstance:
@@ -24986,7 +24986,7 @@ GameObject:
   - component: {fileID: 578931213}
   m_Layer: 0
   m_Name: Flux_Evaporate
-  m_TagString: Untagged
+  m_TagString: flux_evaporate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29723,7 +29723,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -262.94702, y: -90, z: 89.99999}
 --- !u!1 &607615486
 GameObject:
@@ -34475,7 +34475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: -138.59799, y: -90, z: 89.99999}
 --- !u!1 &609608977
 GameObject:
@@ -44817,7 +44817,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 2.9950001, y: 90.00001, z: -90.00001}
 --- !u!1 &1127516957
 GameObject:
@@ -49643,7 +49643,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 2.9950001, y: 90.00001, z: -90.00001}
 --- !u!1 &1159193996
 GameObject:
@@ -54481,7 +54481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 2.9950001, y: 90.00001, z: -90.00001}
 --- !u!1001 &1213328843
 PrefabInstance:
@@ -59473,7 +59473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: -138.59799, y: -90, z: 89.99999}
 --- !u!1 &1339200281
 GameObject:
@@ -59536,7 +59536,7 @@ GameObject:
   - component: {fileID: 1476058813}
   m_Layer: 0
   m_Name: Flux_Hailstorm
-  m_TagString: Untagged
+  m_TagString: flux_hailstorm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64273,7 +64273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 92.08301, y: 89.99999, z: -90}
 --- !u!1 &1510512515
 GameObject:
@@ -69104,7 +69104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &1569654452 stripped
 Transform:
@@ -73983,7 +73983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: -138.59799, y: -90, z: 89.99999}
 --- !u!1 &1710543316
 GameObject:
@@ -78735,7 +78735,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 2.9950001, y: 90.00001, z: -90.00001}
 --- !u!1 &1735763766
 GameObject:
@@ -83487,7 +83487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 2.9950001, y: 90.00001, z: -90.00001}
 --- !u!1 &1785112628
 GameObject:
@@ -93497,7 +93497,7 @@ GameObject:
   - component: {fileID: 2027961835}
   m_Layer: 0
   m_Name: Flux_Stench
-  m_TagString: Untagged
+  m_TagString: flux_stench
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98234,7 +98234,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0.83900005, y: 90.00001, z: -90.00001}
 --- !u!1 &2086614295
 GameObject:
@@ -98922,6 +98922,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1089166340329517966}
     m_Modifications:
+    - target: {fileID: 7680094897928295072, guid: cb2c890b69bc1f4478c1ca2df0065738,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyHP
+      objectReference: {fileID: 0}
     - target: {fileID: 8413225141599817789, guid: cb2c890b69bc1f4478c1ca2df0065738,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -99026,11 +99031,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7680094897928295072, guid: cb2c890b69bc1f4478c1ca2df0065738,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyHP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb2c890b69bc1f4478c1ca2df0065738, type: 3}

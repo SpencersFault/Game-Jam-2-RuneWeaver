@@ -34,6 +34,10 @@ public class SpellMaker : MonoBehaviour
     private GameObject airFX;
     private GameObject earthFX;
     private GameObject charmFX;
+    private GameObject iceFX;
+    private GameObject dryFX;
+    private GameObject grossFX;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +47,10 @@ public class SpellMaker : MonoBehaviour
         airFX = GameObject.FindGameObjectWithTag("air_wand");
         earthFX = GameObject.FindGameObjectWithTag("earth_enemy");
         charmFX = GameObject.FindGameObjectWithTag("charm_enemy");
+        iceFX = GameObject.FindGameObjectWithTag("flux_hailstorm");
+        dryFX = GameObject.FindGameObjectWithTag("flux_evaporate");
+        grossFX = GameObject.FindGameObjectWithTag("flux_stench");
+
     }
 
     public void OnMouseDown()
@@ -305,6 +313,8 @@ public class SpellMaker : MonoBehaviour
                 if (water > 0 && water < 4)
                 {
                     Cast("Snowfall");
+                    iceFX.GetComponent<ParticleSystem>().Play();
+                    dryFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 10f;
                     Debug.Log("Enemy Slime takes 10 damage");
@@ -312,6 +322,7 @@ public class SpellMaker : MonoBehaviour
                 if (air > 0 && air < 4)
                 {
                     Cast("Cold Front");
+                    iceFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 30f;
                     Debug.Log("Enemy Slime takes 30 damage");
@@ -319,6 +330,7 @@ public class SpellMaker : MonoBehaviour
                 if (earth > 0 && earth < 4)
                 {
                     Cast("Tundra");
+                    iceFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 50f;
                     Debug.Log("Enemy Slime takes 50 damage");
@@ -326,6 +338,8 @@ public class SpellMaker : MonoBehaviour
                 if (charm > 0 && charm < 4)
                 {
                     Cast("Cold Shoulder");
+                    iceFX.GetComponent<ParticleSystem>().Play();
+                    grossFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentATK += 5f;
                     Debug.Log("Enemy Slime is angered");
@@ -335,6 +349,7 @@ public class SpellMaker : MonoBehaviour
                     if (fire == 3)
                     {
                         Cast("Freeze");
+                        iceFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 30f;
                         Debug.Log("Enemy Slime takes 30 damage");
@@ -342,6 +357,7 @@ public class SpellMaker : MonoBehaviour
                     else if (fire == 6)
                     {
                         Cast("Subzero");
+                        iceFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 50f;
                         Debug.Log("Enemy Slime takes 50 damage");
@@ -357,6 +373,8 @@ public class SpellMaker : MonoBehaviour
                 if (air > 0 && air < 4)
                 {
                     Cast("Hailstorm");
+                    dryFX.GetComponent<ParticleSystem>().Play();
+                    iceFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 25f;
                     Debug.Log("Enemy Slime takes 25 damage");
@@ -364,6 +382,7 @@ public class SpellMaker : MonoBehaviour
                 if (earth > 0 && earth < 4)
                 {
                     Cast("Swamp");
+                    dryFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP += 5f;
                     Debug.Log("Enemy Slime heals for 5");
@@ -371,6 +390,8 @@ public class SpellMaker : MonoBehaviour
                 if (charm > 0 && charm < 4)
                 {
                     Cast("Stench");
+                    dryFX.GetComponent<ParticleSystem>().Play();
+                    grossFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 1f;
                     Debug.Log("Enemy Slime is hesitant");
@@ -380,6 +401,7 @@ public class SpellMaker : MonoBehaviour
                     if (water == 3)
                     {
                         Cast("Parch");
+                        dryFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 100f;
                         Debug.Log("Enemy Slime takes 100 damage");
@@ -387,6 +409,7 @@ public class SpellMaker : MonoBehaviour
                     if (water == 6)
                     {
                         Cast("Evaporate");
+                        dryFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 200f;
                         Debug.Log("Enemy Slime takes 200 damage");
@@ -394,6 +417,7 @@ public class SpellMaker : MonoBehaviour
                     if (water == 9)
                     {
                         Cast("Drought");
+                        dryFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 1000f;
                         Debug.Log("Enemy Slime takes 1000 damage");
@@ -432,6 +456,7 @@ public class SpellMaker : MonoBehaviour
                 if (charm > 0 && charm < 4)
                 {
                     Cast("Poison");
+                    grossFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
                     Debug.Log("Enemy Slime takes 5 damage");
@@ -455,6 +480,7 @@ public class SpellMaker : MonoBehaviour
                     if (charm == 3)
                     {
                         Cast("Repel");
+                        grossFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentATK -= 5f;
                         Debug.Log("Enemy Slime takes hurts you for less");
@@ -462,6 +488,7 @@ public class SpellMaker : MonoBehaviour
                     if (charm == 6)
                     {
                         Cast("Disgust");
+                        grossFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
                         enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 1000f;
                         Debug.Log("Enemy Slime flees");
