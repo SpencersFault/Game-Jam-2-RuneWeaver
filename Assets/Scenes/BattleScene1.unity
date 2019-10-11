@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 37498066}
   m_Layer: 0
   m_Name: Ice_flux
-  m_TagString: Untagged
+  m_TagString: ice_wand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14965,7 +14965,7 @@ GameObject:
   - component: {fileID: 515833867}
   m_Layer: 0
   m_Name: Gravity_flux
-  m_TagString: Untagged
+  m_TagString: gravity_shower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20220,7 +20220,7 @@ GameObject:
   - component: {fileID: 593980024}
   m_Layer: 0
   m_Name: Drain_flux
-  m_TagString: Untagged
+  m_TagString: drain_enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25093,7 +25093,7 @@ GameObject:
   - component: {fileID: 632860277}
   m_Layer: 0
   m_Name: Repel_flux
-  m_TagString: Untagged
+  m_TagString: repel_wand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30272,7 +30272,7 @@ GameObject:
   - component: {fileID: 1014776801}
   m_Layer: 0
   m_Name: Dry_flux
-  m_TagString: Untagged
+  m_TagString: dry_wand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51498,6 +51498,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1089166340329517966}
     m_Modifications:
+    - target: {fileID: 7680094897928295072, guid: cb2c890b69bc1f4478c1ca2df0065738,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyHP
+      objectReference: {fileID: 0}
     - target: {fileID: 8413225141599817789, guid: cb2c890b69bc1f4478c1ca2df0065738,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51602,11 +51607,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7680094897928295072, guid: cb2c890b69bc1f4478c1ca2df0065738,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyHP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb2c890b69bc1f4478c1ca2df0065738, type: 3}
