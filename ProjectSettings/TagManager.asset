@@ -17,6 +17,11 @@ TagManager:
   - charm_enemy
   - fire_enemy
   - earth_enemy
+  - ice_wand
+  - dry_wand
+  - gravity_shower
+  - drain_enemy
+  - repel_wand
   layers:
   - Default
   - TransparentFX
