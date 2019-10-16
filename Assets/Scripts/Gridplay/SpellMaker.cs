@@ -39,6 +39,9 @@ public class SpellMaker : MonoBehaviour
     private GameObject gravityFX;
     private GameObject drainFX;
     private GameObject repelFX;
+    private GameObject rainstormFX;
+    private GameObject coldshoulderFX;
+    private GameObject sandstormFX;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +56,9 @@ public class SpellMaker : MonoBehaviour
         gravityFX = GameObject.FindGameObjectWithTag("gravity_shower");
         drainFX = GameObject.FindGameObjectWithTag("drain_enemy");
         repelFX = GameObject.FindGameObjectWithTag("repel_wand");
+        rainstormFX = GameObject.FindGameObjectWithTag("rainstorm_shower");
+        coldshoulderFX = GameObject.FindGameObjectWithTag("coldshoulder_wand");
+        sandstormFX = GameObject.FindGameObjectWithTag("sandstorm_wand");
     }
 
     public void OnMouseDown()
@@ -170,8 +176,7 @@ public class SpellMaker : MonoBehaviour
                 if (air > 0 && air < 4)
                 {
                     Cast("Rainstorm");
-                    waterFX.GetComponent<ParticleSystem>().Play();
-                    airFX.GetComponent<ParticleSystem>().Play();
+                    rainstormFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
                     Debug.Log("Enemy Slime takes 5 damage");
@@ -227,8 +232,7 @@ public class SpellMaker : MonoBehaviour
                 if (earth > 0 && earth < 4)
                 {
                     Cast("Sandstorm");
-                    airFX.GetComponent<ParticleSystem>().Play();
-                    earthFX.GetComponent<ParticleSystem>().Play();
+                    sandstormFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 60f;
                     Debug.Log("Enemy Slime takes 60 damage");
@@ -342,8 +346,7 @@ public class SpellMaker : MonoBehaviour
                 if (charm > 0 && charm < 4)
                 {
                     Cast("Cold Shoulder");
-                    iceFX.GetComponent<ParticleSystem>().Play();
-                    repelFX.GetComponent<ParticleSystem>().Play();
+                    coldshoulderFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
                     enemy.GetComponent<EnemyStateMachine>().enemy.currentATK += 5f;
                     Debug.Log("Enemy Slime is angered");
