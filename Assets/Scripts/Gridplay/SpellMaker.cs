@@ -160,8 +160,8 @@ public class SpellMaker : MonoBehaviour
                         Cast("Fire Blast");
                         fireFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 75f;
-                        Debug.Log("Enemy Slime takes 75 damage");
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 70f;
+                        Debug.Log("Enemy Slime takes 70 damage");
                     }
                 }
             }
@@ -230,8 +230,8 @@ public class SpellMaker : MonoBehaviour
                     airFX.GetComponent<ParticleSystem>().Play();
                     earthFX.GetComponent<ParticleSystem>().Play();
                     enemy = GameObject.FindGameObjectWithTag("Enemy");
-                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 25f;
-                    Debug.Log("Enemy Slime takes 25 damage");
+                    enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 60f;
+                    Debug.Log("Enemy Slime takes 60 damage");
                 }
                 if (fire == 0 && water == 0 && air > 0 && earth == 0 && charm == 0)
                 {
@@ -444,10 +444,10 @@ public class SpellMaker : MonoBehaviour
                 {
                     if (air == 3)
                     {
-                        Cast("Slow");
+                        Cast("Gravity");
                         gravityFX.GetComponent<ParticleSystem>().Play();
                         enemy = GameObject.FindGameObjectWithTag("Enemy");
-                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 5f;
+                        enemy.GetComponent<EnemyStateMachine>().enemy.currentHP -= 25f;
                         Debug.Log("Enemy Slime takes 5 damage");
                     }
                     if (air == 6)
