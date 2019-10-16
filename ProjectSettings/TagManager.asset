@@ -22,6 +22,9 @@ TagManager:
   - gravity_shower
   - drain_enemy
   - repel_wand
+  - rainstorm_shower
+  - coldshoulder_wand
+  - sandstorm_wand
   layers:
   - Default
   - TransparentFX
